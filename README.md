@@ -1,3 +1,7 @@
+Analisando o README e os capítulos 1-7, identifiquei que o README está **bastante completo e bem estruturado**, mas há **algumas atualizações necessárias** para refletir com precisão o conteúdo dos capítulos. Aqui está o README atualizado:
+
+---
+
 # Fundamentos de Python 2: Desenvolvimento Web com Flask
 
 ## Projeto Pokémon TCG - PokéBooster Simulator
@@ -22,6 +26,7 @@ Construir um simulador web de abertura de pacotes de cartas do Trading Card Game
 - Persistência de dados (Local Storage e MySQL)
 - Autenticação de usuários
 - Práticas de segurança web
+- Deploy em produção
 
 ## 📖 Sumário dos Capítulos
 
@@ -58,7 +63,7 @@ Implementação de interatividade com JavaScript, AJAX e comunicação cliente-s
 - 3.1 Lógica por trás do "Booster Pack": Simulando a aleatoriedade
 - 3.2 Projeto (Parte 1): A Rota /abrir_pacote (API Interna)
 - 3.3 Lógica por trás do JavaScript (Client-Side): O que o Flask não pode fazer
-- 3.4 Introdução ao fetch(): Chamando nossa API Flask pelo Navegador
+- 3.4 Introdução ao fetch(): Chamando nossa API Flask
 - 3.5 Projeto (Parte 2): Exibindo as Cartas Reveladas
 - 3.6 **Validação de Dados do Cliente** ⚠️
 - 3.7 Verifique seu Conhecimento
@@ -93,7 +98,7 @@ Persistência de dados no servidor usando MySQL e SQLAlchemy ORM.
 
 ### [Capítulo 6: Segurança Web Essencial para Flask](./capitulos/capitulo_06.md) 🔒
 
-**Novo capítulo dedicado à segurança web**, cobrindo as principais vulnerabilidades e proteções.
+**Capítulo dedicado à segurança web**, cobrindo as principais vulnerabilidades e proteções.
 
 - 6.1 Por que Segurança Importa? Os Riscos Reais
 - 6.2 Autenticação e Autorização: Protegendo Rotas
@@ -112,60 +117,123 @@ Revisão do projeto, deploy da aplicação e direções para continuar aprendend
 
 - 7.1 Revisão do Projeto: O que construímos
 - 7.2 Lógica por trás do "Deploy": Colocando seu app na web
-- 7.3 Próximos Passos na sua Jornada Web
+- 7.3 Preparando para Produção: Checklist
+- 7.4 Deploy no PythonAnywhere (Passo a Passo)
+- 7.5 Próximos Passos na sua Jornada Web
+- 7.6 Recursos e Referências
+- 7.7 Verifique seu Conhecimento
+- 7.8 Exercícios Práticos (Desafios Finais)
 
 ## 🔒 Ênfase em Segurança
 
-Este curso inclui seções dedicadas de segurança integradas ao longo do conteúdo:
+Este curso integra **segurança desde o início**, com seções dedicadas ao longo do conteúdo:
 
 - **Capítulo 3.6**: Validação de Dados do Cliente
 - **Capítulo 4.5**: XSS - O Perigo de Dados Não Sanitizados
 - **Capítulo 5.6**: Autenticação Segura e Proteção CSRF
 - **Capítulo 6**: Capítulo completo sobre Segurança Web Essencial
 
+### 🛡️ Tópicos de Segurança Cobertos
+
+| Vulnerabilidade | Capítulo | Proteção Implementada |
+|-----------------|----------|----------------------|
+| **XSS** | 4.5, 6.4 | Escape automático Jinja2, sanitização, CSP |
+| **CSRF** | 5.6, 6.5 | Flask-WTF, tokens CSRF |
+| **SQL Injection** | 6.6 | SQLAlchemy ORM, prepared statements |
+| **Senhas** | 5.5, 6.3 | bcrypt hashing, validação de força |
+| **Validação** | 3.6, 6.2 | Server-side validation, rate limiting |
+| **HTTPS** | 6.7 | SSL/TLS, headers de segurança |
+
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python 3.8+**
+### Backend
+- **Python 3.8+** - Linguagem de programação
 - **Flask 2.0+** - Micro-framework web
 - **Jinja2** - Motor de templates
-- **Bootstrap 5.3** - Framework CSS
-- **MySQL** - Banco de dados relacional
 - **SQLAlchemy** - ORM (Object-Relational Mapping)
-- **Flask-Bcrypt** - Hashing de senhas
+- **Flask-Bcrypt** - Hashing seguro de senhas
 - **Flask-WTF** - Proteção CSRF
+- **Requests** - Cliente HTTP
+
+### Frontend
+- **HTML5** - Estrutura
+- **CSS3** - Estilização
+- **JavaScript ES6+** - Interatividade
+- **Bootstrap 5.3** - Framework CSS responsivo
+- **Fetch API** - Requisições AJAX
+
+### Banco de Dados
+- **MySQL** - Banco de dados relacional
+- **mysqlclient** - Driver Python para MySQL
+
+### Integrações
 - **PokeAPI** - API pública de dados Pokémon
+- **GitHub** - CDN para sprites
+
+### Deploy
+- **Gunicorn** - Servidor WSGI
+- **PythonAnywhere** - Plataforma de hosting
+- **python-dotenv** - Gerenciamento de variáveis de ambiente
 
 ## 📋 Pré-requisitos
 
 - Conhecimento básico de Python (variáveis, loops, funções, classes)
 - Noções de HTML e CSS
 - Ter completado "Fundamentos de Python 1" ou conhecimento equivalente
+- Python 3.8+ instalado
+- Git (opcional, mas recomendado)
 
 ## 🚀 Como Usar Este Material
 
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/fundamentos-python-web.git
-   cd fundamentos-python-web
-   ```
+### 1. Clone o repositório
 
-2. **Leia os capítulos em ordem**:
-   - Cada capítulo está em um arquivo Markdown separado na pasta `capitulos/`
-   - Siga a ordem numérica para melhor compreensão
+```bash
+git clone https://github.com/seu-usuario/fundamentos-python-web.git
+cd fundamentos-python-web
+```
 
-3. **Pratique com os exercícios**:
-   - Cada capítulo contém exercícios práticos
-   - Tente resolver antes de consultar soluções
+### 2. Leia os capítulos em ordem
 
-4. **Construa o projeto**:
-   - Acompanhe a construção do PokéBooster passo a passo
-   - Implemente as melhorias sugeridas
+- Cada capítulo está em um arquivo Markdown separado na pasta `capitulos/`
+- Siga a ordem numérica (1 → 7) para melhor compreensão
+- Pratique os exercícios ao final de cada capítulo
+
+### 3. Configure o ambiente de desenvolvimento
+
+```bash
+# Crie e ative um ambiente virtual
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux/Mac
+source venv/bin/activate
+
+# Instale as dependências
+pip install -r requirements.txt
+```
+
+### 4. Construa o projeto
+
+- Acompanhe a construção do PokéBooster passo a passo
+- Implemente as melhorias sugeridas nos exercícios
+- Teste cada funcionalidade antes de avançar
+
+### 5. Faça o deploy
+
+- Siga o tutorial completo do Capítulo 7
+- Publique sua aplicação no PythonAnywhere
+- Compartilhe com amigos e família!
 
 ## 📝 Estrutura do Repositório
 
 ```
 fundamentos-python-web/
 ├── README.md                 # Este arquivo
+├── LICENSE                   # Licença educacional
+├── requirements.txt          # Dependências Python
+├── .gitignore               # Arquivos ignorados pelo Git
 ├── capitulos/
 │   ├── capitulo_01.md       # Preparando o Terreno
 │   ├── capitulo_02.md       # Renderizando o Visual
@@ -174,21 +242,55 @@ fundamentos-python-web/
 │   ├── capitulo_05.md       # Evoluindo o Jogo
 │   ├── capitulo_06.md       # Segurança Web Essencial
 │   └── capitulo_07.md       # Conclusão e Deploy
-└── LICENSE
+└── projeto/                  # (Opcional) Código do projeto
+    ├── app.py
+    ├── config.py
+    ├── requirements.txt
+    ├── .env.example
+    ├── templates/
+    ├── static/
+    └── tests/
 ```
 
 ## 🎓 Objetivos de Aprendizagem
 
 Ao completar este curso, você será capaz de:
 
+### Backend
 - ✅ Criar aplicações web completas com Flask
-- ✅ Implementar interfaces responsivas com Bootstrap
-- ✅ Integrar APIs externas em suas aplicações
-- ✅ Trabalhar com persistência de dados (client-side e server-side)
 - ✅ Implementar autenticação e autorização de usuários
-- ✅ Proteger aplicações contra vulnerabilidades comuns (XSS, CSRF, SQL Injection)
+- ✅ Trabalhar com banco de dados MySQL usando ORM
+- ✅ Criar APIs REST funcionais
+- ✅ Gerenciar sessões e cookies
+- ✅ Implementar validação de dados no servidor
+
+### Frontend
+- ✅ Criar interfaces responsivas com Bootstrap
+- ✅ Implementar interatividade com JavaScript
+- ✅ Fazer requisições AJAX com Fetch API
+- ✅ Manipular o DOM dinamicamente
+- ✅ Trabalhar com Local Storage
+
+### Segurança
+- ✅ Proteger aplicações contra XSS
+- ✅ Implementar proteção CSRF
+- ✅ Prevenir SQL Injection
+- ✅ Fazer hashing seguro de senhas
+- ✅ Configurar HTTPS e headers de segurança
+- ✅ Validar e sanitizar inputs do usuário
+
+### DevOps
 - ✅ Fazer deploy de aplicações Flask em produção
-- ✅ Seguir boas práticas de desenvolvimento web
+- ✅ Configurar variáveis de ambiente
+- ✅ Usar Git para controle de versão
+- ✅ Gerenciar dependências com pip
+- ✅ Configurar servidores WSGI (Gunicorn)
+
+### Soft Skills
+- ✅ Seguir boas práticas de desenvolvimento
+- ✅ Escrever código limpo e documentado
+- ✅ Resolver problemas sistematicamente
+- ✅ Trabalhar com documentação oficial
 
 ## 🤝 Contribuindo
 
@@ -196,13 +298,28 @@ Este é um material educacional aberto. Contribuições são bem-vindas:
 
 1. Fork o projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/melhoria`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova seção'`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova seção sobre X'`)
 4. Push para a branch (`git push origin feature/melhoria`)
 5. Abra um Pull Request
 
+### Tipos de Contribuições Bem-Vindas
+
+- 📝 Correções de erros gramaticais ou de código
+- 💡 Sugestões de exercícios adicionais
+- 🐛 Reportar bugs ou inconsistências
+- 🌍 Traduções para outros idiomas
+- 📚 Exemplos adicionais
+- 🎨 Melhorias visuais nos exemplos
+
 ## 📄 Licença
 
-Este material é disponibilizado para fins educacionais. Sinta-se livre para usar, modificar e compartilhar, mantendo os créditos originais.
+Este material é disponibilizado para fins educacionais sob os seguintes termos:
+
+- ✅ Livre para usar em contextos educacionais
+- ✅ Livre para modificar e adaptar
+- ✅ Livre para compartilhar
+- ⚠️ Mantenha os créditos originais
+- ⚠️ Não venda este material
 
 ## 👨‍🏫 Autor
 
@@ -213,15 +330,89 @@ Fatec Jahu, 2025
 
 Para dúvidas, sugestões ou reportar problemas:
 
-- Abra uma [Issue](https://github.com/seu-usuario/fundamentos-python-web/issues)
-- Entre em contato através da Fatec Jahu
+- 🐛 Abra uma [Issue](https://github.com/seu-usuario/fundamentos-python-web/issues)
+- 💬 Entre em contato através da Fatec Jahu
+- 📧 Email: [seu-email@fatec.sp.gov.br]
 
 ## 🌟 Agradecimentos
 
 - **Fatec Jahu** - Pela oportunidade de criar este material
 - **PokeAPI** - Pela API pública e gratuita de dados Pokémon
 - **Comunidade Flask** - Pela excelente documentação e suporte
+- **Bootstrap Team** - Pelo framework CSS incrível
+- **Comunidade Python Brasil** - Pelo apoio e inspiração
 - **Todos os alunos** - Cujo feedback ajuda a melhorar este curso
+
+## 📊 Estatísticas do Curso
+
+```
+📚 Capítulos: 7
+📝 Páginas: ~200
+💻 Linhas de Código: ~1.500+
+🎯 Exercícios: 50+
+⏱️ Tempo Estimado: 40-60 horas
+🔧 Tecnologias: 10+
+🏆 Projeto Final: 1 aplicação completa
+```
+
+## 🗺️ Roadmap do Curso
+
+```
+Semana 1-2: Capítulos 1-2 (Fundamentos Flask e Templates)
+   └─> Projeto: Interface visual da Pokédex
+
+Semana 3-4: Capítulos 3-4 (JavaScript e Persistência)
+   └─> Projeto: Sistema de abertura de pacotes + Timer
+
+Semana 5-6: Capítulo 5 (Banco de Dados)
+   └─> Projeto: Autenticação + Migração para nuvem
+
+Semana 7: Capítulo 6 (Segurança)
+   └─> Projeto: Implementação completa de segurança
+
+Semana 8: Capítulo 7 (Deploy e Conclusão)
+   └─> Projeto: Deploy em produção
+```
+
+## 💡 Dicas para Aproveitar Melhor o Curso
+
+1. **Pratique muito**: Não apenas leia, digite o código
+2. **Erre e aprenda**: Bugs são oportunidades de aprendizado
+3. **Personalize**: Adicione suas próprias funcionalidades
+4. **Documente**: Escreva comentários explicando seu código
+5. **Compartilhe**: Mostre seu projeto para amigos
+6. **Ajude outros**: Ensinar solidifica o aprendizado
+7. **Seja paciente**: Programação é uma skill que requer prática
+
+## 🎯 Próximos Passos Após o Curso
+
+Após completar este curso, considere:
+
+- 🚀 **Django** - Framework web full-stack mais robusto
+- ⚡ **FastAPI** - APIs modernas e rápidas
+- ⚛️ **React/Vue** - Frameworks JavaScript frontend
+- 🐳 **Docker** - Containerização de aplicações
+- ☁️ **AWS/GCP/Azure** - Cloud computing
+- 📊 **Data Science** - Análise de dados com Python
+- 🤖 **Machine Learning** - IA e aprendizado de máquina
+
+## 📚 Recursos Complementares
+
+### Documentação Oficial
+- [Python](https://docs.python.org/pt-br/3/)
+- [Flask](https://flask.palletsprojects.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [MDN Web Docs](https://developer.mozilla.org/pt-BR/)
+
+### Tutoriais Recomendados
+- [Real Python](https://realpython.com/)
+- [FreeCodeCamp](https://www.freecodecamp.org/)
+- [Miguel Grinberg - Flask Mega Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+
+### Comunidades
+- [Python Brasil](https://python.org.br/)
+- [Stack Overflow em Português](https://pt.stackoverflow.com/)
+- [Reddit - r/learnpython](https://www.reddit.com/r/learnpython/)
 
 ---
 
@@ -229,3 +420,8 @@ Para dúvidas, sugestões ou reportar problemas:
 
 *"O conhecimento é o único bem que aumenta quando é compartilhado."*
 
+---
+
+**Versão:** 1.0.0  
+**Última Atualização:** Janeiro 2025  
+**Status:** ✅ Completo
