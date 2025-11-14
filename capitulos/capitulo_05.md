@@ -40,15 +40,15 @@ A lógica aqui é a de **persistência centralizada e autoritativa**. Em vez de 
 ```
 ┌─────────────┐           REQUEST            ┌─────────────┐
 │   CLIENTE   │  ──────────────────────────> │   SERVIDOR  │
-│ (Navegador) │                               │   (Flask)   │
-│             │  <──────────────────────────  │      ↕      │
-└─────────────┘          RESPONSE             │   QUERY     │
-                                               │      ↕      │
-                                               ┌─────────────┐
-                                               │   BANCO DE  │
-                                               │    DADOS    │
-                                               │   (MySQL)   │
-                                               └─────────────┘
+│ (Navegador) │                              │   (Flask)   │
+│             │  <────────────────────────── │      ↕      │
+└─────────────┘          RESPONSE            │   QUERY     │
+                                             │      ↕      │
+                                             ┌─────────────┐
+                                             │   BANCO DE  │
+                                             │    DADOS    │
+                                             │   (MySQL)   │
+                                             └─────────────┘
 ```
 
 O navegador do usuário (**Cliente**) fará uma requisição ao nosso aplicativo (**Servidor Flask**). Se essa requisição precisar de dados (como a coleção salva), o Flask irá "perguntar" a um terceiro serviço, o **Servidor de Banco de Dados** (no nosso caso, o MySQL), que é especializado em armazenar, organizar e recuperar dados de forma eficiente.
